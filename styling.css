@@ -1,0 +1,10 @@
+#container {
+    display: flex;
+    flex-flow: row;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#container #left_section, #container #right_section {
+    margin: auto;
+    width: 50%
+}
