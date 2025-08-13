@@ -33,8 +33,15 @@ html {
 }
 
 @media screen and (min-width: 600px) {
-    #header_text {
-        padding: 4em;
+    
+    .section-1 {
+        width: 50%;
+    }
+
+    .experience {
+        width: 50%;
+        margin-right: 0;
+        margin-left: auto;
     }
 }
 
@@ -43,7 +50,9 @@ html {
         flex-flow: row;
         justify-content: space-around;
     }
-
+    #header_text {
+        padding: 2em;
+    }
     #me {
         width: 20em;
     }
@@ -54,6 +63,9 @@ html {
 
 
 @media screen and (min-width: 1200px) {
+    #header_text {
+        padding: 4em;
+    }
     header {
         flex-flow: row;
         justify-content: center;
@@ -85,16 +97,6 @@ header {
     background-color: peachpuff;
 }
 
-#content {
-    height: 100vh;
-    padding-block: 2em;
-}
-
-#content p {
-    margin-block: 2em;
-    margin-inline: 2em;
-}
-
 #header_text {
     border: solid white .1em;
 }
@@ -103,3 +105,13 @@ header {
     margin-block-start: .4em;
 }
 
+.section-1, .section-2 {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.section-2 {
+    border-block-start: 2px solid white;
+}
