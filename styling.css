@@ -3,6 +3,29 @@
     src: url('SFUIText-Light.woff2') format('woff2');
 }
 
+@keyframes animate-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes animate-slide {
+  0% {
+    opacity: 0;
+    transform: translate(0, 50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
 html {
     font-family: 'SF UI Text', sans-serif;
 }
@@ -13,7 +36,7 @@ html {
 }
 
 @media screen and (max-width: 600px) {
-    header {
+    #header_section {
         flex-flow: column;
         row-gap: 2em;
         justify-content: center;
@@ -28,7 +51,7 @@ html {
     }
 
     #me {
-        width: 20em;
+        width: 18em;
     }
 }
 
@@ -46,7 +69,7 @@ html {
 }
 
 @media screen and (min-width: 600px) and (max-width: 1200px) {
-    header {
+    #header_section {
         flex-flow: row;
         justify-content: space-around;
     }
@@ -66,7 +89,7 @@ html {
     #header_text {
         padding: 4em;
     }
-    header {
+    #header_section {
         flex-flow: row;
         justify-content: center;
         column-gap: 12em;
@@ -86,11 +109,10 @@ body {
 }
 
 #me {
-    width: 20em;
     height: auto;
 }
 
-header {
+#header_section {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -99,11 +121,17 @@ header {
 
 #header_text {
     border: solid white .1em;
+    animation-duration: 0.5s;
+    animation-name: animate-slide;
+    animation-fill-mode: backwards;
+    animation-delay: 0.5s;
 }
 
 #header_text h1 {
     margin-block-start: .4em;
+    font-size: 2em;
 }
+
 
 .section-1, .section-2 {
     height: 100vh;
@@ -114,4 +142,11 @@ header {
 
 .section-2 {
     border-block-start: 2px solid white;
+}
+
+#image_container {
+    animation-duration: 0.5s;
+    animation-name: animate-slide;
+    animation-fill-mode: backwards;
+    animation-delay: 0.5s;
 }
