@@ -1,10 +1,52 @@
-#container {
-    display: flex;
-    flex-flow: row;
-    font-family: 'Courier New', Courier, monospace;
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('SFUIText-Light.woff2') format('woff2');
 }
 
-#container #left_section, #container #right_section {
-    margin: auto;
-    width: 50%
+html {
+    font-family: 'SF UI Text', sans-serif;
+}
+#container {
+    display: flex;
+    flex-flow: column;
+}
+@media screen and (max-width: 600px) {
+    header {
+        flex-flow: column;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        flex-flow: row;
+    }
+}
+
+body {
+    background-color: #daebf0;
+    margin: 0;
+}
+
+#left_section {
+    background-color: peachpuff;
+}
+#me {
+    width: 20em;
+    height: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+}
+
+#image_container, #header_text {
+    margin: auto
+}
+
+#right_section p {
+    margin: 2em;
 }
