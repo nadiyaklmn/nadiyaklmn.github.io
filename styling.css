@@ -13,12 +13,30 @@ html {
 @media screen and (max-width: 600px) {
     header {
         flex-flow: column;
+        row-gap: 2em;
+    }
+    #header_text {
+        padding: 1em;
+    }
+
+    #content {
+        padding-inline: 2em;
     }
 }
 
 @media screen and (min-width: 600px) {
     header {
         flex-flow: row;
+        column-gap: 12em;
+
+    }
+
+    #header_text {
+        padding: 4em;
+    }
+
+    #content {
+        padding-inline: 22em;
     }
 }
 
@@ -27,26 +45,33 @@ body {
     margin: 0;
 }
 
-#left_section {
-    background-color: peachpuff;
-}
 #me {
-    width: 20em;
+    width: 25em;
     height: auto;
 }
 
 header {
+    height: 100vh;
     display: flex;
     align-items: center;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    background-color: peachpuff;
+    justify-content: center;
 
 }
 
-#image_container, #header_text {
-    margin: auto
+#content {
+    height: 100vh;
 }
 
-#right_section p {
-    margin: 2em;
+#content p {
+    margin-block: 2em;
+    margin-inline: 2em;
 }
+
+#header_text {
+    border: solid white .1em;
+}
+#header_text h1 {
+    margin-block-start: .4em;
+}
+
