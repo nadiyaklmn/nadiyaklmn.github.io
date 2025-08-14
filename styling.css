@@ -104,7 +104,7 @@ html {
 }
 
 body {
-    background-color: #daebf0;
+    background-color: peachpuff;
     margin: 0;
 }
 
@@ -116,7 +116,6 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: peachpuff;
 }
 
 #header_text {
@@ -138,6 +137,11 @@ body {
     display: flex;
     flex-flow: column;
     justify-content: center;
+}
+
+main {
+    scroll-snap-type: y mandatory;
+    background-color: #daebf0;
 }
 
 .section-2 {

@@ -5,15 +5,15 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         let rect = section.getBoundingClientRect(); 
         if (currentScrollY > lastScrollY) {
-            if (rect.top >= 50 && rect.top < window.innerHeight - 50) {
-                section.scrollIntoView({ behavior: 'smooth' });
+            if (rect.top > 0 && rect.top < window.innerHeight) {
+                //section.scrollIntoView({ behavior: 'smooth' });
                 
             } 
         }
 
         if (currentScrollY < lastScrollY) {
-            if (rect.bottom >= 50 && rect.bottom < window.innerHeight - 100){
-                section.scrollIntoView({ behavior: 'smooth' });
+            if (rect.bottom > 0 && rect.bottom < window.innerHeight){
+                //section.scrollIntoView({ behavior: 'smooth' });
                 
             } 
         }}
