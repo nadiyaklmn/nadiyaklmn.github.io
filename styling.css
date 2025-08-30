@@ -46,18 +46,95 @@ html {
         flex-flow: column;
         row-gap: 2em;
         justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
 
     }
     #header_text {
         padding: 1em;
+        flex-flow: column;
+        align-items: center;
     }
 
-    #content {
-        padding-inline: 2em;
+    #header_text h1 {
+        font-size: 15em;
+        color: black;
     }
 
+    #divider {
+        border-top: 1.3em solid black;
+        content: '';
+        width: 70%;
+    }
     #me {
-        width: 18em;
+        width: calc(90% - 8em);
+        padding: 4em;
+    }
+
+    .section-1, .section-2 {
+        flex-flow: column;
+    }
+
+    .section-1 {
+        margin-inline: auto;
+        padding-inline: 8em;
+    }
+
+    #about_me {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    #subtitle {
+        font-size: 16em;
+        margin-block-end: .5em;
+    }
+
+    .who-am-i {
+        margin-inline: auto;
+        font-size: 6em;
+    }
+
+    .mask {
+        display: flex;
+        justify-content: center;
+    }
+
+    .background_cover {
+        height: 100%;
+        margin: auto;
+    }
+
+    .attributes-container {
+        flex-flow: column;
+        row-gap: 6em;;
+    }
+
+    .attribute {
+        width: 90%;
+        display: flex;
+        flex-flow: column;
+        align-items: center
+    }
+
+    .attribute h2 {
+        font-size: 9em;
+    }
+
+    .attribute p {
+        font-size: 7em;
+    }
+
+    .about-me-content h1 {
+        font-size: 9em;
+    }
+    
+    .about-me-header h1 {
+        font-size: 15em;
     }
 }
 
@@ -66,6 +143,77 @@ html {
         width: 50%;
         margin-right: 0;
         margin-left: auto;
+    }
+
+    #header_text {
+        flex-flow: row;
+        column-gap: 8em;
+        margin-block-start: 8em;
+        height: 14em;
+    }
+
+    #header_text h1 {
+        margin-block-start: .4em;
+        font-size: 4em;
+        color: white;
+    }
+
+    #divider {
+        border-left: .2em solid white;
+        content: '';
+    }
+
+    #me {
+        width: 40em;
+        padding: 1em;
+    }
+
+    .section-1, .section-2 {
+        flex-flow: row;
+    }
+
+    .section-1 {
+        margin-block: 3em;
+        padding-inline: 3em;
+    }
+
+    #subtitle {
+        font-size: 6em;
+        margin-block-end: .2em;
+    }
+
+    .who-am-i {
+        margin-block-start: 8em;
+        font-size: 2em;
+    }
+
+    .background_cover {
+        width: 100%;
+    }
+
+    .attributes-container {
+        flex-flow: row;
+        column-gap: 6em;
+    }
+
+    .attribute {
+        width: 27em;
+    }
+
+    .attribute h2 {
+        font-size: 3em;
+    }
+
+    .attribute p {
+        font-size: 2em;
+    }
+
+    .about-me-header h1 {
+        font-size: 2em;
+    }
+
+    .about-me-header h1 {
+        font-size: 5em;
     }
 }
 
@@ -105,8 +253,6 @@ body {
 
 #me {
     height: auto;
-    width: 40em;
-    padding: 1em;
     background-color: #75c2c9;;
 }
 
@@ -134,7 +280,6 @@ header {
 .background_cover {
     display: block;
     opacity: 0.5;
-    width: 100%;
 }
 
 #header_text {
@@ -143,16 +288,10 @@ header {
     animation-fill-mode: backwards;
     animation-delay: 0.5s;
     display: flex;
-    flex-flow: row;
-    column-gap: 8em;
-    margin-block-start: 8em;
-    height: 14em;
 }
 
 #header_text h1 {
     margin-block-start: .4em;
-    font-size: 4em;
-    color: white;
     text-transform: uppercase;
     text-align: center;
     width: 8em;
@@ -161,7 +300,6 @@ header {
 
 .section-1, .section-2 {
     display: flex;
-    flex-flow: row;
     justify-content: center;
 }
 
@@ -174,7 +312,6 @@ main {
 .section-1 {
     column-gap: 10em;
     margin-block: 3em;
-    padding-inline: 3em;
 }
 
 .section-2 {
@@ -185,6 +322,7 @@ main {
     position: absolute;
     width: 100%;
 }
+
 #image_container {
     animation-duration: 0.5s;
     animation-name: animate-slide;
@@ -192,27 +330,15 @@ main {
     animation-delay: 0.5s;
 }
 
-#divider {
-    border-left: .2em solid white;
-    content: '';
-}
-
 #subtitle {
-    font-size: 6em;
     font-weight: 100;
     margin-block-start: 0px;
-    margin-block-end: .2em;
 }
 
-.who-am-i {
-    margin-block-start: 8em;
-    font-size: 2em;
-}
+
 
 .attributes-container {
     display: flex;
-    flex-flow: row;
-    column-gap: 6em;
     z-index: 1;
     position: relative;
     margin-block: 12em;
@@ -220,20 +346,17 @@ main {
 }
 
 .attribute {
-    width: 27em;
     background: #faefe0;
     padding-inline: 3em;
     padding-block: 2em;
 }
 
 .attribute h2 {
-    font-size: 3em;
     height: 7em;
     font-weight: 100;
 }
 
 .attribute p {
-    font-size: 2em;
     margin-inline: -1.5em;
     border-top: 1px solid lightgray;
     padding-inline: 1.5em;
@@ -252,23 +375,19 @@ main {
     justify-content: center;
     background: #faefe0;
     width: 100%;
-    height: 23em;
     align-items: center;
 }
 
 .about-me-header h1 {
-    font-size: 5em;
     font-weight: 100;
 }
 
 .about-me-content {
-    height: 35em;
     justify-content: center;
     display: flex;
 }
 
 .about-me-content h1 {
     margin-block: 3em;
-    font-size: 2em;
     font-weight: 100;
 }
